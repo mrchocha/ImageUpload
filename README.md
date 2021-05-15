@@ -8,4 +8,4 @@ App for extracting the text from images.
 - AOS
 
 # demo Video 
-[click here](app1/__pycache__/views.cpython-38.pyc)
+[click here](imagetextextract/app1/static/media/demovideo.mp4)
