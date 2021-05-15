@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock extra_css %}
+
+
+{% block extra_body %}
+<div class="coint">
+    <form method="POST" action="{% url 'home' %}" enctype="multipart/form-data" data-aos="fade-down">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="formFileMultiple" class="form-label">Upload multiple files</label>
+            <input class="form-control" name='myfiles' type="file" accept="image/*" id="formFileMultiple" multiple>
+        </div>
+        <button type="submit" class="btn btn-dark">submit</button>
+    </form>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {% for file in file_data %}
+        <div class="card" style="width: 18rem;" data-aos="fade-right">
+            <div class="card-body">
+                <h5 class="card-title">{{ file.file_name }}</h5>
+                <p class="card-text">
+                <div class="mb-3">
+                    <label for="filename" class="form-label">Image Name</label>
+                    <input class="form-control" name='filename' value="{{ file.file_name }}" type="text" id="filename">
+                </div>
+                <div class="mb-3">
+                    <label for="filename" class="form-label">Image Text</label>
+                    <input class="form-control" name='filetext' value="{{ file.file_text }}" type="text" id="filename">
+                </div>
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock extra_body %}

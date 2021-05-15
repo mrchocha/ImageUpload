@@ -1,0 +1,28 @@
+.coint {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+form {
+  margin-top: 20px;
+  text-align: center;
+  border: solid 1px gray;
+  padding: 20px;
+}
+
+.row {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.card {
+  margin-right: 30px;
+}
+.card-title {
+  position: absolute;
+  top: -15px;
+  background-color: white;
+  border: 0.5px solid gray;
+  padding: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
