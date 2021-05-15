@@ -8,4 +8,4 @@ App for extracting the text from images.
 - AOS
 
 # demo Video 
-[click here](imagetextextract/app1/static/media/demovideo.mp4)
+[click here](https://github.com/mrchocha/ImageUpload/blob/main/app1/static/media/demovideo.mp4)
